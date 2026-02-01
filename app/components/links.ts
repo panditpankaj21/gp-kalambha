@@ -1,0 +1,15 @@
+export const navLinks = [
+  { id: 1, name: "मुख्यपृष्ठ", en: "Home", href: "/" },
+  { id: 2, name: "ग्रामपंचायत माहिती", en: "About GP", href: "#" },
+  { id: 3, name: "सेवा", en: "Citizen Services", href: "#" },
+  { id: 4, name: "सुविधा - आरोग्य व शिक्षण", en: "Facilities", href: "#" },
+  { id: 5, name: "शासकीय योजना", en: "Schemes", href: "#" },
+  { id: 6, name: "सूचना", en: "Notices", href: "#" },
+  { id: 7, name: "कामांची माहिती", en: "Projects", href: "#" },
+  { id: 8, name: "आर्थिक माहिती", en: "Finance", href: "#" },
+  { id: 9, name: "कर माहिती", en: "Tax Information", href: "#" },
+  { id: 10, name: "पदाधिकारी व सदस्य", en: "Members & Staff", href: "#" },
+  { id: 11, name: "माहिती अधिकार", en: "RTI Section", href: "#" },
+  { id: 12, name: "गॅलरी", en: "Photo / Video Gallery", href: "#" },
+  { id: 13, name: "संपर्क", en: "Contact", href: "#" },
+];
