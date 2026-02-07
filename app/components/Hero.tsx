@@ -6,9 +6,8 @@ export default function Hero() {
   const images = [
     "https://images.unsplash.com/photo-1588416936097-41850ab3d86d?q=80&w=2000",
     "https://images.unsplash.com/photo-1517089152318-42ec560349c0?q=80&w=2000",
-    "https://images.unsplash.com/photo-1464202351453-fa1b1484f0c2?q=80&w=2000",
     "https://images.unsplash.com/photo-1506461883276-594a12b11cf3?q=80&w=2000",
-    "https://images.unsplash.com/photo-1517089531940-6d0046180556?q=80&w=2000"
+    "https://images.unsplash.com/photo-1517089152318-42ec560349c0?q=80&w=2000",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
