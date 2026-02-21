@@ -100,26 +100,6 @@ export default function Footer() {
           <div className="text-[10px] font-black uppercase tracking-widest text-slate-600 order-2 md:order-1">
             © २०२६ ग्रामपंचायत कलंभा. सर्व हक्क राखीव.
           </div>
-          
-          <div className="flex flex-col sm:flex-row items-center gap-4 bg-white/5 p-4 rounded-3xl border border-white/5 shadow-inner order-1 md:order-2">
-            <span className="text-[9px] font-black uppercase text-slate-500 tracking-tighter">Developed By:</span>
-            
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
-              {/* PKP Credit */}
-              <div className="flex flex-col">
-                <span className="text-[11px] font-black text-orange-500 leading-none">Pankaj Kumar Pandit</span>
-                <span className="text-[9px] font-medium text-slate-500 mt-1">pkp20022@gmail.com</span>
-              </div>
-              
-              <div className="hidden sm:block w-[1px] h-6 bg-slate-800" />
-
-              {/* VW Credit */}
-              <div className="flex flex-col">
-                <span className="text-[11px] font-black text-blue-400 leading-none">Vaibhav Wandode</span>
-                <span className="text-[9px] font-medium text-slate-500 mt-1">vaibhavwnd@gmail.com</span>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
