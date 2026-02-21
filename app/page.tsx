@@ -3,14 +3,14 @@ import {
   Users, Map as MapIcon, Sprout, Building2, 
   MessageSquare, Send, CheckCircle, Activity,
   CloudSun, Lightbulb, Landmark, TreePine,
-  ShieldCheck, Globe, ArrowRight, Zap
+  ShieldCheck, Globe, ArrowRight, Zap, Navigation, Mail
 } from 'lucide-react';
 import Hero from './components/Hero';
 import NotificationTicker from './components/NotificationTicker';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8fafc] selection:bg-orange-100">
+    <div className="min-h-screen flex flex-col bg-[#f8fafc] selection:bg-orange-100 font-sans">
       <main className="grow">
         <Hero />
         <NotificationTicker />
@@ -18,31 +18,55 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-12 space-y-24">
           
           {/* 1. Village Introduction & Stats Dashboard */}
-          <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 space-y-6">
+          <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-8">
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-2">
                   <div className="h-1 w-8 bg-blue-600 rounded-full" />
                   <span className="text-blue-600 font-black text-[10px] uppercase tracking-[0.3em]">Identity</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-black text-slate-900 italic leading-tight">ग्रामपंचायत <span className="text-orange-500">परिचय</span></h2>
+                <h2 className="text-3xl md:text-5xl font-black text-slate-900 italic tracking-tighter leading-tight">
+                  ग्रामपंचायत <span className="text-orange-500">परिचय</span>
+                </h2>
               </div>
               
-              <div className="prose prose-slate max-w-none">
-                <p className="text-sm md:text-base text-slate-600 leading-relaxed font-medium italic border-l-4 border-slate-200 pl-5">
-                  "ग्रामपंचायत ही स्थानिक स्वराज्य संस्था आहे जिला राज्य शासनाकडून देण्यात आलेल्या अधिकारांवर गावाच्या पातळीवर स्थानिक विकास व सार्वजनिक सेवा राबविण्याची जबाबदारी असते. हे संस्थात्मक स्वरूप पाणीपुरवठा, सार्वजनिक आरोग्य आणि शिक्षणासाठी महत्त्वाचे आहे."
+              <div className="space-y-6">
+                <p className="text-sm md:text-base text-slate-700 leading-relaxed font-bold italic border-l-4 border-blue-600 pl-6 py-2 bg-blue-50/50 rounded-r-2xl shadow-sm">
+                  नागपूर जिल्ह्यातील काटोल तालुक्यातील कळंभा हे एक महत्त्वाचे आणि प्रगतशील गाव आहे. संत्र्यांच्या उत्पादनासाठी प्रसिद्ध असलेल्या या पट्ट्यात वसलेले आमचे गाव, कृषी संस्कृती आणि सामाजिक सलोख्यासाठी ओळखले जाते.
+                </p>
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed font-medium">
+                  गावाचे स्थान भौगोलिकदृष्ट्या अत्यंत सोयीचे असून, ते काटोल शहरापासून १७ किमी तर नागपूर जिल्हा मुख्यालयापासून ६९ किमी अंतरावर आहे. गावातील जनजीवन मुख्यत्वे शेतीवर आधारित असून, ग्रामपंचायतीच्या माध्यमातून गावात नागरी सुविधा उपलब्ध करून देण्यावर भर दिला जात आहे.
                 </p>
               </div>
               
+              {/* Important Info: Grid Layout */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                 <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm group hover:border-blue-500 transition-all">
+                    <Landmark size={20} className="text-blue-600 mb-3" />
+                    <p className="text-[8px] font-black uppercase text-slate-400 tracking-widest mb-1">प्रशासकीय विभाग</p>
+                    <p className="text-xs font-black text-slate-800">काटोल तालुका, नागपूर विभाग (विदर्भ)</p>
+                 </div>
+                 <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm group hover:border-orange-500 transition-all">
+                    <Navigation size={20} className="text-orange-600 mb-3" />
+                    <p className="text-[8px] font-black uppercase text-slate-400 tracking-widest mb-1">दळणवळण</p>
+                    <p className="text-xs font-black text-slate-800">नरखेड, पांढुर्णा आणि वरूड शहरांशी उत्तम संपर्क</p>
+                 </div>
+                 <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm group hover:border-emerald-500 transition-all">
+                    <Mail size={20} className="text-emerald-600 mb-3" />
+                    <p className="text-[8px] font-black uppercase text-slate-400 tracking-widest mb-1">पिनकोड व संपर्क</p>
+                    <p className="text-xs font-black text-slate-800">४४१३०५ (टपाल कार्यालय: पारडसिंगा)</p>
+                 </div>
+              </div>
+
               {/* Stats Grid: High Density */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {[
-                  { icon: <Users size={18}/>, label: "लोकसंख्या", val: "१,५८५", color: "bg-blue-900 text-white" },
+                  { icon: <Users size={18}/>, label: "लोकसंख्या", val: "१,५८५", color: "bg-blue-950 text-white" },
                   { icon: <MapIcon size={18}/>, label: "क्षेत्रफळ (हे.आर)", val: "३९५.५६", color: "bg-white text-slate-800" },
                   { icon: <Building2 size={18}/>, label: "एकूण मालमत्ता", val: "५४९", color: "bg-white text-slate-800" },
-                  { icon: <Sprout size={18}/>, label: "मुख्य पिके", val: "कापूस, मोसंबी", color: "bg-orange-500 text-white" },
+                  { icon: <Sprout size={18}/>, label: "मुख्य पिके", val: "कापूस, संत्री", color: "bg-orange-600 text-white" },
                 ].map((stat, i) => (
-                  <div key={i} className={`${stat.color} p-5 rounded-[1.5rem] shadow-lg border border-slate-100 transition-transform hover:-translate-y-1`}>
+                  <div key={i} className={`${stat.color} p-5 rounded-2xl shadow-lg border border-slate-100 transition-transform hover:-translate-y-1`}>
                     <div className="opacity-60 mb-2">{stat.icon}</div>
                     <p className="text-[8px] uppercase font-black tracking-widest opacity-70 mb-0.5">{stat.label}</p>
                     <p className="text-sm md:text-base font-black leading-none">{stat.val}</p>
@@ -52,21 +76,21 @@ export default function Home() {
             </div>
 
             {/* Demographic Ratio Card */}
-            <div className="bg-white border border-slate-100 rounded-[2rem] p-6 shadow-sm flex flex-col justify-center relative overflow-hidden">
+            <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm flex flex-col justify-center relative overflow-hidden h-full">
                <div className="absolute -bottom-4 -right-4 text-slate-50 opacity-10 rotate-12">
                   <Activity size={120} />
                </div>
               <h3 className="text-sm font-black text-slate-800 mb-6 flex items-center gap-2">
                 <Activity size={16} className="text-blue-600" /> जनगणना तपशील (२०११)
               </h3>
-              <div className="space-y-3 relative z-10">
-                <div className="flex justify-between items-center p-3 bg-blue-50/50 rounded-xl border border-blue-100">
+              <div className="space-y-4 relative z-10">
+                <div className="flex justify-between items-center p-4 bg-blue-50/50 rounded-xl border border-blue-100">
                   <span className="font-bold text-blue-900 text-xs uppercase tracking-tighter">पुरूष</span>
-                  <span className="font-black text-blue-900">८३६</span>
+                  <span className="font-black text-blue-900 text-lg">८३६</span>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-pink-50/50 rounded-xl border border-pink-100">
+                <div className="flex justify-between items-center p-4 bg-pink-50/50 rounded-xl border border-pink-100">
                   <span className="font-bold text-pink-900 text-xs uppercase tracking-tighter">स्त्री</span>
-                  <span className="font-black text-pink-900">७४९</span>
+                  <span className="font-black text-pink-900 text-lg">७४९</span>
                 </div>
               </div>
             </div>
@@ -84,9 +108,9 @@ export default function Home() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               {/* Interactive Map */}
-              <div className="lg:col-span-8 h-[400px] bg-white rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white relative group">
+              <div className="lg:col-span-8 h-[400px] bg-white rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative group">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14878.694601446704!2d78.5833441!3d21.1852579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4f007f59d57a3%3A0xc6657962483842c0!2sKalambha%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6051.991697412335!2d78.56692192330965!3d21.36433136706595!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd456b312b09ddd%3A0xcdbe3eb1cd5e496e!2sKalambha%2C%20Maharashtra%2C%20India!5e1!3m2!1sen!2sus!4v1771667950124!5m2!1sen!2sus" 
                   width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
                   className="grayscale hover:grayscale-0 transition-all duration-700"
                 ></iframe>
@@ -99,10 +123,10 @@ export default function Home() {
               {/* Informational Sidebar */}
               <div className="lg:col-span-4 flex flex-col gap-4">
                 {/* Visual Vibe Card */}
-                <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-[2rem] p-6 text-white shadow-lg relative overflow-hidden group">
+                <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden group">
                   <CloudSun className="absolute -right-4 -top-4 opacity-10 group-hover:scale-110 transition-transform" size={100} />
                   <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-0.5">गावातील वातावरण</p>
-                  <h3 className="text-2xl font-black mb-4 tracking-tighter">प्रसन्न कलंभा</h3>
+                  <h3 className="text-2xl font-black mb-4 tracking-tighter italic">प्रसन्न कलंभा</h3>
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-2 text-xs bg-white/10 w-fit px-3 py-1 rounded-lg">
                       <TreePine size={14} className="text-emerald-400" /> हिरवळ: १००%
@@ -113,23 +137,19 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Did You Know List */}
-                <div className="bg-white border border-slate-100 rounded-[2rem] p-5 shadow-sm flex-grow">
+                {/* Neighboring Villages */}
+                <div className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex-grow">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="p-2 bg-orange-100 rounded-lg text-orange-600"><Lightbulb size={16} /></div>
-                    <h4 className="font-black text-slate-800 text-xs">माहित आहे का? (Facts)</h4>
+                    <div className="p-2 bg-emerald-100 rounded-lg text-emerald-600"><Globe size={16} /></div>
+                    <h4 className="font-black text-slate-800 text-xs uppercase tracking-tight">शेजारील गावे</h4>
                   </div>
-                  <ul className="space-y-4">
-                    <li className="text-[11px] text-slate-500 font-bold leading-relaxed border-l-2 border-orange-500 pl-3 italic">
-                      कलंभा गाव हे मोसंबी आणि कापूस उत्पादनासाठी तालुक्यात प्रसिद्ध आहे.
-                    </li>
-                    <li className="text-[11px] text-slate-500 font-bold leading-relaxed border-l-2 border-blue-500 pl-3 italic">
-                      गावातील हवामान वर्षभर शेतीसाठी अतिशय पोषक असते.
-                    </li>
-                    <li className="text-[11px] text-slate-500 font-bold leading-relaxed border-l-2 border-emerald-500 pl-3 italic">
-                      एकजूट आणि सामाजिक सलोखा ही आमच्या गावाची खरी ओळख आहे.
-                    </li>
-                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    {["गोंडीदिग्रस", "येनवा", "मासली", "राजणी", "मोहखेडी"].map((village, idx) => (
+                        <span key={idx} className="bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-lg text-[10px] font-black text-slate-600 uppercase tracking-tighter italic shadow-sm hover:border-emerald-500 transition-colors">
+                            {village}
+                        </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -143,7 +163,7 @@ export default function Home() {
               <div className="p-3 bg-white/5 border border-white/10 rounded-2xl w-fit">
                 <MessageSquare size={32} className="text-orange-500" />
               </div>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-[1.1]">तुमची तक्रार किंवा<br /><span className="text-orange-500">सूचना</span> नोंदवा</h2>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-[1.1] italic">तुमची तक्रार किंवा<br /><span className="text-orange-500">सूचना</span> नोंदवा</h2>
               <p className="text-slate-400 font-bold text-sm md:text-base italic leading-relaxed max-w-sm">
                 "आपल्या समस्या सोडवणे हेच आमचे कर्तव्य आहे. गावाच्या विकास प्रक्रियेत आपले योगदान द्या."
               </p>
@@ -157,28 +177,28 @@ export default function Home() {
             <form className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-2xl space-y-4 relative z-10 shadow-2xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className="space-y-1">
-                  <label className="text-[8px] font-black text-slate-500 uppercase ml-2">पूर्ण नाव</label>
+                  <label className="text-[8px] font-black text-slate-500 uppercase ml-2 tracking-widest">पूर्ण नाव</label>
                   <input type="text" placeholder="राहुल पवार" className="w-full bg-white/5 border border-white/10 p-3 rounded-xl text-xs focus:outline-none focus:border-orange-500 transition-colors" />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-[8px] font-black text-slate-500 uppercase ml-2">मोबाईल नंबर</label>
+                  <label className="text-[8px] font-black text-slate-500 uppercase ml-2 tracking-widest">मोबाईल नंबर</label>
                   <input type="tel" placeholder="+91" className="w-full bg-white/5 border border-white/10 p-3 rounded-xl text-xs focus:outline-none focus:border-orange-500 transition-colors" />
                 </div>
               </div>
               <div className="space-y-1">
-                <label className="text-[8px] font-black text-slate-500 uppercase ml-2">तक्रारीचा विभाग</label>
-                <select className="w-full bg-white/5 border border-white/10 p-3 rounded-xl text-xs focus:outline-none focus:border-orange-500 transition-colors text-slate-400 appearance-none">
-                  <option className="bg-slate-900">पाणी पुरवठा</option>
-                  <option className="bg-slate-900">रस्ते व वीज</option>
-                  <option className="bg-slate-900">स्वच्छता</option>
-                  <option className="bg-slate-900">इतर</option>
+                <label className="text-[8px] font-black text-slate-500 uppercase ml-2 tracking-widest">तक्रारीचा विभाग</label>
+                <select className="w-full bg-slate-950 border border-white/10 p-3 rounded-xl text-xs focus:outline-none focus:border-orange-500 transition-colors text-slate-400 appearance-none">
+                  <option>पाणी पुरवठा</option>
+                  <option>रस्ते व वीज</option>
+                  <option>स्वच्छता</option>
+                  <option>इतर</option>
                 </select>
               </div>
               <div className="space-y-1">
-                <label className="text-[8px] font-black text-slate-500 uppercase ml-2">तुमचा संदेश</label>
+                <label className="text-[8px] font-black text-slate-500 uppercase ml-2 tracking-widest">तुमचा संदेश</label>
                 <textarea rows={3} placeholder="येथे लिहा..." className="w-full bg-white/5 border border-white/10 p-3 rounded-xl text-xs focus:outline-none focus:border-orange-500 transition-colors"></textarea>
               </div>
-              <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-lg active:scale-95 text-xs uppercase tracking-widest">
+              <button className="w-full bg-orange-600 hover:bg-white hover:text-orange-600 text-white font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all shadow-lg active:scale-95 text-xs uppercase tracking-[0.2em]">
                 <Send size={16} /> तक्रार पाठवा
               </button>
             </form>

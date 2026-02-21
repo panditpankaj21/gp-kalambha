@@ -118,17 +118,59 @@ export default function ContactPage() {
                    </div>
 
                    {/* Legal Info */}
-                   <div className="bg-slate-900 rounded-xl p-5 text-white relative overflow-hidden">
-                      <div className="flex items-center justify-between mb-4">
-                         <span className="text-[10px] font-black uppercase text-blue-400 tracking-[0.2em]">Working Window</span>
-                         <Clock size={18} className="text-orange-400" />
-                      </div>
-                      <p className="text-[15px] font-black tracking-tight">०९:४५ AM - ०६:१५ PM</p>
-                      <div className="mt-3 flex items-center gap-2">
-                         <CheckCircle2 size={14} className="text-emerald-500" />
-                         <span className="text-[9px] font-bold text-slate-400 uppercase">सोमवार ते शनिवार कार्यान्वित</span>
-                      </div>
-                   </div>
+                   <div className="bg-orange-100 rounded-2xl p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] border border-slate-100  relative overflow-hidden group">
+            {/* Decorative Background Accent */}
+            <div className="absolute top-0  right-0 w-24 h-24 bg-blue-50 rounded-full -mr-12 -mt-12 transition-transform group-hover:scale-110 duration-700" />
+            
+            <div className="relative z-10 ">
+               {/* Header Section */}
+               <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center gap-3">
+                  <div className="p-2.5 bg-orange-50 rounded-xl text-orange-500 shadow-sm border border-orange-100/50">
+                     <Clock size={20} />
+                  </div>
+                  <div>
+                     <span className="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] block leading-none">
+                        Operation Window
+                     </span>
+                     <span className="text-[8px] font-bold text-blue-600 uppercase tracking-widest mt-1 block">
+                        Official Timings
+                     </span>
+                  </div>
+                  </div>
+                  
+                  {/* Live Status Indicator */}
+                  <div className="flex items-center gap-2  bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-100/50">
+                  <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-[9px] font-black uppercase text-emerald-600 tracking-tighter">
+                     Active Now
+                  </span>
+                  </div>
+               </div>
+
+               {/* Time Display */}
+               <div className="bg-slate-50/50 rounded-xl p-4 border border-slate-100 mb-5">
+                  <p className="text-2xl font-black tracking-tighter text-slate-800 flex items-center gap-3">
+                  ०९:४५ <span className="text-slate-400 text-sm font-bold uppercase italic">AM</span> 
+                  <span className="h-1 w-4 bg-orange-500 rounded-full" /> 
+                  ०६:१५ <span className="text-slate-400 text-sm font-bold uppercase italic">PM</span>
+                  </p>
+               </div>
+
+               {/* Footer Section */}
+               <div className="flex items-center gap-3 px-1">
+                  <div className="flex -space-x-1">
+                        <div className="w-5 h-5 rounded-full bg-blue-600 border-2 border-white flex items-center justify-center text-white shadow-sm">
+                           <CheckCircle2 size={10} />
+                        </div>
+                        </div>
+                        <p className="text-[10px] font-black text-slate-500 uppercase tracking-tighter">
+                        सोमवार ते शुक्रवार कार्यान्वित <span className="mx-1 text-slate-300">|</span> 
+                        <span className="text-rose-500 opacity-70 italic">शनिवार - रविवार सुट्टी</span>
+                        </p>
+                     </div>
+                  </div>
+                  </div>
                 </div>
              </div>
           </div>
@@ -179,7 +221,7 @@ export default function ContactPage() {
                 
                 <div className="w-full h-full rounded-xl overflow-hidden border border-slate-100">
                   <iframe 
-                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14878.718365287315!2d78.58043645!3d21.1850239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4ec45037c769f%3A0x144284892aba9f6d!2sGram%20Panchayat%20Office%2C%20Kalambha!5e1!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&maptype=satellite" 
+                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6051.991697412335!2d78.56692192330965!3d21.36433136706595!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd456b312b09ddd%3A0xcdbe3eb1cd5e496e!2sKalambha%2C%20Maharashtra%2C%20India!5e1!3m2!1sen!2sus!4v1771667950124!5m2!1sen!2sus" 
                    width="100%" 
                    height="100%" 
                    style={{ border: 0 }} 
