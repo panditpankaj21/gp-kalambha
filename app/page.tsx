@@ -136,7 +136,7 @@ export default function Home() {
           </section>
 
           {/* 3. Executive Complaint Portal */}
-          <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-slate-900 rounded-[3rem] p-8 md:p-16 text-white relative overflow-hidden">
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-slate-900 rounded-2xl p-8 md:p-16 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
             
             <div className="space-y-6 relative z-10">
@@ -154,7 +154,7 @@ export default function Home() {
             </div>
 
             {/* Complaint Form Card */}
-            <form className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[2.5rem] space-y-4 relative z-10 shadow-2xl">
+            <form className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-2xl space-y-4 relative z-10 shadow-2xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className="space-y-1">
                   <label className="text-[8px] font-black text-slate-500 uppercase ml-2">पूर्ण नाव</label>

@@ -24,7 +24,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0f172a] text-slate-300 pt-14 pb-8">
+    <footer className="bg-[#0f172a] text-slate-300 pt-9 pb-2">
       <div className="max-w-7xl mx-auto px-4">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-slate-800/50">
@@ -72,31 +72,30 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 font-bold">
                 <Phone size={18} className="text-emerald-500 shrink-0"/> 
-                <span className="text-slate-200">+९१ ८०८०९८४८२७</span>
+                <span className="text-slate-200">+91 8080984827</span>
               </div>
             </div>
           </div>
 
           {/* Shaskiya Abhiyan Section */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             <h3 className="text-white font-bold text-sm uppercase tracking-widest border-l-4 border-orange-500 pl-3">शासकीय अभियान</h3>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-3 gap-2">
               {abhiyanImages.map((img, i) => (
-                <div key={i} className="bg-white/5 p-2 rounded-lg border border-white/10 flex items-center justify-center hover:bg-white/10 transition-all group">
+                <div key={i} className="bg-white p-1 rounded-md flex items-center justify-center h-14 w-full shadow-sm hover:scale-105 transition-transform">
                   <img 
                     src={img.src} 
-                    alt={img.alt} 
-                    className="h-8 w-auto object-contain transition-all group-hover:scale-110" 
+                    alt={img.alt}  
+                    className=" w-auto h-full object-contain" 
                   />
                 </div>
               ))}
             </div>
-            <p className="text-[9px] text-slate-500 font-bold uppercase tracking-widest text-center">Government Initiatives</p>
           </div>
         </div>
 
         {/* Bottom Bar: Copyright & Detailed Developer Credits */}
-        <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className=" border-t border-slate-700 flex justify-center items-center pt-2">
           <div className="text-[10px] font-black uppercase tracking-widest text-slate-600 order-2 md:order-1">
             © २०२६ ग्रामपंचायत कलंभा. सर्व हक्क राखीव.
           </div>
